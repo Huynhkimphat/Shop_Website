@@ -1230,3 +1230,7 @@ i.home-product-like-icon-fill {
     position: relative;
     top: 2px;
 }
+
+.home-pagination {
+    margin: 48px 0 32px 0;
+}
