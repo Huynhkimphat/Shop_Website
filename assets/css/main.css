@@ -1,4 +1,11 @@
-/* Header Navbars */
+/* * App */
+
+.app {
+    overflow: hidden;
+}
+
+
+/* *Header Navbars */
 
 .header {
     height: var(--header-height);
@@ -176,7 +183,7 @@
 } */
 
 
-/* Header QR code  */
+/** Header QR code  */
 
 .header__qr {
     background-color: var(--white-color);
@@ -224,7 +231,7 @@
 }
 
 
-/* Header Notifications */
+/** Header Notifications */
 
 .header__notify {
     position: absolute;
@@ -411,7 +418,7 @@
 }
 
 
-/* authen modal */
+/** authen modal */
 
 .auth-form {
     width: 500px;
@@ -542,7 +549,7 @@
 }
 
 
-/* Header With Search */
+/** Header With Search */
 
 .header-with-search {
     height: var(--header-with-search-height);
@@ -552,6 +559,7 @@
 }
 
 .header__mobile-search {
+    display: none;
     padding: 0 12px;
 }
 
@@ -569,6 +577,7 @@
     color: transparent;
     display: block;
     line-height: 0;
+    text-align: left;
 }
 
 .header__search-checkbox:checked~.header__search {
@@ -604,6 +613,7 @@
     display: inline-block;
     padding: 0 8px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent
 }
 
 .header__cart-wrap:hover .header__cart-list {
@@ -908,7 +918,7 @@
 }
 
 
-/* Search History */
+/** Search History */
 
 .header__search-history {
     position: absolute;
@@ -1025,6 +1035,63 @@
 .category-item__link:hover {
     right: -4px;
     color: var(--primary-color);
+}
+
+
+/* *Mobile Category  */
+
+.mobile-category {
+    display: none;
+}
+
+.mobile-category__list {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.mobile-category__list::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-category__item {
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+
+.mobile-category__item:nth-of-type(3n+1) .mobile-category__link {
+    background-color: #7DA6D3;
+}
+
+.mobile-category__item:nth-of-type(3n+2) .mobile-category__link {
+    background-color: #6BC2B5;
+}
+
+.mobile-category__item:nth-of-type(3n) .mobile-category__link {
+    background-color: #75B970;
+}
+
+.mobile-category__link {
+    --line-height: 2rem;
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    line-height: --line-height;
+    text-align: center;
+    width: 110px;
+    height: calc(--line-height * 2);
+    display: block;
+    border-radius: 4px;
+    font-weight: 300;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    padding: 0 6px;
 }
 
 
@@ -1303,6 +1370,7 @@ i.home-product-like-icon-fill {
 
 .home-pagination {
     margin: 48px 0 32px 0;
+    padding-left: 0;
 }
 
 
